@@ -1,0 +1,370 @@
+/* ============================================
+   WHY CHOOSE US PAGE — Specific Styles
+   ============================================ */
+
+/* ---------- Page Hero Banner ---------- */
+.page-hero {
+  position: relative;
+  padding: 180px 0 100px;
+  background: var(--navy-deep);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.page-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(1.1);
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10,22,40,0.9) 0%,
+    rgba(10,22,40,0.7) 50%,
+    rgba(10,22,40,0.95) 100%
+  );
+  z-index: 1;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-hero-content h1 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.page-hero-content p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.7;
+}
+
+/* ---------- The Difference Section (Staggered Cards) ---------- */
+.difference-section {
+  padding: var(--section-padding);
+  background: var(--off-white);
+  position: relative;
+}
+
+/* Background decorative line */
+.difference-section::before {
+  content: '';
+  position: absolute;
+  top: 150px;
+  bottom: 100px;
+  left: 50%;
+  width: 2px;
+  background: var(--gold-light);
+  transform: translateX(-50%);
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.diff-stagger-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 60px auto 0;
+}
+
+.diff-step-card {
+  display: flex;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition-smooth);
+  width: 85%;
+  position: relative;
+}
+
+/* Stagger layout */
+.diff-step-card:nth-child(odd) {
+  align-self: flex-start;
+  flex-direction: row;
+}
+
+.diff-step-card:nth-child(even) {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Decorative dot connecting to center line */
+.diff-step-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background: var(--gold);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  border: 4px solid var(--off-white);
+  box-shadow: 0 0 0 1px var(--gold);
+}
+
+.diff-step-card:nth-child(odd)::before {
+  right: -55px; /* Adjust based on container width */
+}
+
+.diff-step-card:nth-child(even)::before {
+  left: -55px;
+}
+
+.diff-step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
+}
+
+.diff-step-num {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(201,169,110,0.2); /* Very light gold */
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: var(--transition-fast);
+}
+
+.diff-step-card:nth-child(odd) .diff-step-num {
+  margin-right: 30px;
+}
+
+.diff-step-card:nth-child(even) .diff-step-num {
+  margin-left: 30px;
+}
+
+.diff-step-card:hover .diff-step-num {
+  color: var(--gold);
+}
+
+.diff-step-content h3 {
+  color: var(--navy);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.diff-step-content p {
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* ---------- Buying Process Flow ---------- */
+.buying-process-section {
+  padding: var(--section-padding);
+  background: var(--white);
+  text-align: center;
+}
+
+.process-pipeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 60px;
+  position: relative;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Horizontal line */
+.process-pipeline::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: var(--gray-200);
+  z-index: 0;
+}
+
+/* Animated gold line */
+.process-pipeline::after {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 5%;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  z-index: 1;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-pipeline.visible::after {
+  width: 90%;
+}
+
+.pipeline-node {
+  position: relative;
+  z-index: 2;
+  width: 14%;
+}
+
+.node-icon {
+  width: 72px;
+  height: 72px;
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  transition: var(--transition-fast);
+  color: var(--gray-500);
+}
+
+.pipeline-node:hover .node-icon {
+  border-color: var(--gold);
+  background: var(--navy);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.node-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+}
+
+.pipeline-node h4 {
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+/* ---------- Built Around Trust ---------- */
+.trust-section {
+  padding: var(--section-padding);
+  background: var(--navy-deep);
+  color: var(--white);
+}
+
+.trust-section .section-label {
+  color: var(--gold);
+}
+
+.trust-section h2 {
+  color: var(--white);
+  text-align: center;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.trust-card {
+  background: rgba(255,255,255,0.03);
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: var(--transition-fast);
+}
+
+.trust-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(201,169,110,0.3);
+  transform: translateY(-5px);
+}
+
+.trust-icon {
+  margin-bottom: 20px;
+}
+
+.trust-icon svg {
+  width: 40px;
+  height: 40px;
+  stroke: var(--gold);
+}
+
+.trust-card h3 {
+  color: var(--white);
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.trust-card p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .difference-section::before,
+  .diff-step-card::before {
+    display: none;
+  }
+  .diff-stagger-container {
+    gap: 24px;
+  }
+  .diff-step-card {
+    width: 100%;
+  }
+  .diff-step-card:nth-child(even),
+  .diff-step-card:nth-child(odd) {
+    flex-direction: column;
+    text-align: left;
+    align-self: center;
+  }
+  .diff-step-card:nth-child(odd) .diff-step-num,
+  .diff-step-card:nth-child(even) .diff-step-num {
+    margin: 0 0 16px 0;
+  }
+  
+  .process-pipeline {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .process-pipeline::before,
+  .process-pipeline::after {
+    display: none;
+  }
+  .pipeline-node {
+    width: 30%;
+  }
+  
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .pipeline-node {
+    width: 45%;
+  }
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+}

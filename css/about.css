@@ -1,0 +1,339 @@
+/* ============================================
+   ABOUT US PAGE — Specific Styles
+   ============================================ */
+
+/* ---------- Page Hero Banner ---------- */
+.page-hero {
+  position: relative;
+  padding: 180px 0 100px;
+  background: var(--navy-deep);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.page-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%) contrast(1.2);
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,22,40,0.9) 0%,
+    rgba(10,22,40,0.6) 50%,
+    rgba(10,22,40,0.85) 100%
+  );
+  z-index: 1;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-hero-content h1 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.page-hero-content p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.7;
+}
+
+
+/* ---------- Our Story Section ---------- */
+.story-section {
+  padding: var(--section-padding);
+  background: var(--white);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.story-text h2 {
+  margin-bottom: 30px;
+}
+
+.story-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--gray-600);
+}
+
+.story-text p:last-child {
+  margin-bottom: 0;
+}
+
+.story-image {
+  position: relative;
+}
+
+.story-image-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.story-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.story-image-accent {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 60%;
+  height: 40%;
+  background: var(--off-white);
+  border: 1px solid var(--gold);
+  z-index: -1;
+  border-radius: 16px;
+}
+
+
+/* ---------- Our Values Section ---------- */
+.values-section {
+  padding: var(--section-padding);
+  background: var(--off-white);
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Make last two items center if in 3-column grid */
+@media (min-width: 1024px) {
+  .values-grid .value-card:nth-child(4) {
+    grid-column: 1 / span 1;
+    transform: translateX(50%);
+  }
+  .values-grid .value-card:nth-child(5) {
+    grid-column: 2 / span 1;
+    transform: translateX(50%);
+  }
+}
+
+.value-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  border: 1px solid var(--gray-200);
+  transition: var(--transition-fast);
+  text-align: center;
+}
+
+.value-card:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  transition: var(--transition-fast);
+}
+
+.value-card:hover .value-icon {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+}
+
+.value-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--gold-dark);
+  transition: var(--transition-fast);
+}
+
+.value-card:hover .value-icon svg {
+  stroke: var(--white);
+}
+
+.value-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+
+/* ---------- Vision & Mission Section ---------- */
+.vision-section {
+  padding: var(--section-padding);
+  background: var(--navy);
+  color: var(--white);
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.vision-card {
+  background: var(--navy-dark);
+  padding: 50px 40px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  z-index: 1;
+}
+
+.vision-card-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at top right, rgba(201,169,110,0.15), transparent 70%);
+  z-index: -1;
+}
+
+.vision-card .section-label {
+  color: var(--gold);
+}
+
+.vision-card h3 {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin: 20px 0;
+  line-height: 1.4;
+}
+
+.vision-card p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* ---------- Our Promise Section ---------- */
+.promise-section {
+  padding: 120px 0;
+  background: var(--white);
+  text-align: center;
+  position: relative;
+}
+
+.promise-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 60px;
+  background: var(--gold);
+}
+
+.promise-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.promise-quote-mark {
+  font-family: var(--font-heading);
+  font-size: 8rem;
+  line-height: 1;
+  color: var(--cream);
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.promise-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+}
+
+.promise-content p {
+  font-size: 1.15rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.promise-label {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+  .values-grid .value-card:nth-child(4),
+  .values-grid .value-card:nth-child(5) {
+    transform: none;
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 140px 0 80px;
+  }
+  .page-hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .promise-content h2 {
+    font-size: 1.8rem;
+  }
+}

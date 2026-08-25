@@ -1,0 +1,210 @@
+/* ============================================
+   FAQS PAGE — Specific Styles
+   ============================================ */
+
+/* ---------- Page Header ---------- */
+.page-header-simple {
+  padding: 160px 0 80px;
+  background: var(--navy-deep);
+  text-align: center;
+}
+
+.page-header-simple h1 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.page-header-simple p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ---------- FAQ Search ---------- */
+.faq-search-section {
+  padding: 40px 0;
+  background: var(--off-white);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 24px 16px 56px;
+  border-radius: 30px;
+  border: 1px solid var(--gray-300);
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: var(--shadow-md);
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  stroke: var(--gray-400);
+}
+
+
+/* ---------- FAQ Layout ---------- */
+.faq-content {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Sidebar Navigation */
+.faq-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.faq-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-nav a {
+  display: block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: var(--gray-600);
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  background: var(--off-white);
+  border-left: 3px solid transparent;
+}
+
+.faq-nav a:hover,
+.faq-nav a.active {
+  background: var(--cream);
+  color: var(--navy);
+  border-left-color: var(--gold);
+}
+
+
+/* FAQ Categories */
+.faq-category {
+  margin-bottom: 60px;
+}
+
+.faq-category:last-child {
+  margin-bottom: 0;
+}
+
+.faq-category h2 {
+  font-size: 1.8rem;
+  color: var(--navy);
+  margin-bottom: 30px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+/* Reusing and adapting the accordion styles from residential */
+.faq-accordion .accordion-item {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-accordion .accordion-header {
+  padding: 24px;
+  color: var(--navy);
+  background: transparent;
+  font-size: 1.1rem;
+}
+
+.faq-accordion .accordion-header:hover {
+  background: var(--off-white);
+}
+
+.faq-accordion .accordion-icon {
+  background: rgba(201,169,110,0.1);
+}
+
+.faq-accordion .accordion-icon svg {
+  stroke: var(--gold-dark);
+}
+
+.faq-accordion .accordion-content {
+  background: var(--white);
+}
+
+.faq-accordion .accordion-content-inner {
+  padding: 0 24px 24px;
+  color: var(--gray-600);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.faq-accordion .accordion-item.active .accordion-header {
+  color: var(--gold-dark);
+}
+
+.faq-accordion .accordion-item.active .accordion-icon {
+  background: var(--gold);
+}
+
+.faq-accordion .accordion-item.active .accordion-icon svg {
+  stroke: var(--white);
+}
+
+/* No Results State */
+.no-results {
+  display: none;
+  text-align: center;
+  padding: 40px;
+  color: var(--gray-500);
+}
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .faq-sidebar {
+    position: relative;
+    top: 0;
+  }
+  .faq-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  .faq-nav a {
+    white-space: nowrap;
+  }
+}

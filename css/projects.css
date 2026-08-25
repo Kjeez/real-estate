@@ -1,0 +1,233 @@
+/* ============================================
+   PROJECTS PAGE — Specific Styles
+   ============================================ */
+
+/* ---------- Page Header ---------- */
+.projects-page-header {
+  padding: 160px 0 80px;
+  background: var(--navy-deep);
+  text-align: center;
+}
+
+.projects-page-header h1 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.projects-page-header p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+
+/* ---------- Projects Filters ---------- */
+.projects-content {
+  padding: 60px 0 100px;
+  background: var(--off-white);
+}
+
+.project-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  color: var(--gray-600);
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.filter-btn:hover {
+  background: var(--gray-100);
+  border-color: var(--gray-300);
+}
+
+.filter-btn.active {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  box-shadow: var(--shadow-md);
+}
+
+
+/* ---------- Projects Grid ---------- */
+.projects-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.project-large-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  transition: var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-large-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
+}
+
+.project-large-image {
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-large-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.project-large-card:hover .project-large-image img {
+  transform: scale(1.08);
+}
+
+.project-large-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10,22,40,0.9) 0%,
+    rgba(10,22,40,0.3) 50%,
+    rgba(10,22,40,0) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.project-status {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: rgba(10,22,40,0.7);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.project-status.launching {
+  color: var(--gold-light);
+  border-color: rgba(201,169,110,0.3);
+}
+
+.project-large-overlay h3 {
+  color: var(--white);
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.project-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+}
+
+.project-location svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--gold);
+}
+
+.project-large-body {
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-large-body p {
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.project-tag {
+  background: var(--off-white);
+  border: 1px solid var(--gray-200);
+  color: var(--navy);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.project-large-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--gray-200);
+  padding-top: 20px;
+}
+
+.project-price {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.project-price span {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  font-weight: 400;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .projects-page-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-page-header {
+    padding: 140px 0 60px;
+  }
+  .projects-page-header h1 {
+    font-size: 2.2rem;
+  }
+  .project-large-image {
+    height: 260px;
+  }
+}

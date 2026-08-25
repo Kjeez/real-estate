@@ -1,0 +1,278 @@
+/* ============================================
+   LOCATION & CONNECTIVITY PAGE — Specific Styles
+   ============================================ */
+
+/* ---------- Page Header ---------- */
+.page-header-simple {
+  padding: 160px 0 80px;
+  background: var(--navy-deep);
+  text-align: center;
+}
+
+.page-header-simple h1 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.page-header-simple p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+
+/* ---------- Map Section ---------- */
+.map-section {
+  padding: 0;
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  background: var(--gray-200);
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/hero-bg.jpg'); /* fallback image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.map-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10,22,40,0.5); /* Navy tint over map placeholder */
+}
+
+.map-overlay-card {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-xl);
+  max-width: 400px;
+  z-index: 10;
+  border-top: 4px solid var(--gold);
+}
+
+.map-overlay-card h3 {
+  color: var(--navy);
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+
+.map-overlay-card p {
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.map-pin {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--navy);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.map-pin svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--gold);
+}
+
+
+/* ---------- Connectivity Points ---------- */
+.connectivity-section {
+  padding: var(--section-padding);
+  background: var(--white);
+}
+
+.connectivity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.conn-card {
+  padding: 30px;
+  background: var(--off-white);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  transition: var(--transition-fast);
+}
+
+.conn-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
+  background: var(--white);
+}
+
+.conn-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(201,169,110,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.conn-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--gold-dark);
+}
+
+.conn-card h3 {
+  color: var(--navy);
+  font-size: 1.15rem;
+  margin-bottom: 16px;
+}
+
+.conn-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.conn-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-600);
+  font-size: 0.95rem;
+}
+
+.conn-stat svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--gray-400);
+}
+
+.conn-stat span {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+
+/* ---------- Location Checklist ---------- */
+.loc-checklist-section {
+  padding: var(--section-padding);
+  background: var(--navy-deep);
+  color: var(--white);
+}
+
+.loc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.loc-text h2 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.loc-text p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.gold-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gold-checklist li {
+  position: relative;
+  padding-left: 40px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.gold-checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C9A96E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.loc-image-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.loc-image-wrap img {
+  width: 100%;
+  display: block;
+}
+
+.loc-image-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  z-index: 1;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .connectivity-grid { grid-template-columns: repeat(2, 1fr); }
+  .loc-grid { grid-template-columns: 1fr; gap: 40px; }
+  .map-overlay-card {
+    left: 5%;
+    max-width: 350px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .connectivity-grid { grid-template-columns: 1fr; }
+  .map-overlay-card {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    max-width: 100%;
+    margin: -50px 20px 0; /* Pull up over map */
+    border-radius: 12px;
+  }
+  .map-section {
+    height: 40vh;
+  }
+}

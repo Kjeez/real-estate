@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Book Site Visit | Dholera Real Estate</title>
+  <meta name="description" content="Get in touch with our property experts. Book a site visit in Dholera SIR or request a virtual tour for remote investment assistance.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21V9l9-7 9 7v12H3z"/></svg>
+        </div>
+        <div>
+          <div class="logo-text">DHOLERA</div>
+          <div class="logo-subtitle">Real Estate</div>
+        </div>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="why-dholera.html">Dholera SIR</a>
+        <a href="projects.html">Projects</a>
+        <a href="why-choose-us.html">Why Us</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-cta">
+        <a href="#book" class="btn btn-gold">
+          Book a Site Visit
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="page-header-simple">
+    <div class="container">
+      <span class="section-label" style="color:var(--gold-light);">Connect With Us</span>
+      <h1 class="reveal">Start the Conversation</h1>
+      <p class="reveal">
+        Whether you are ready to book a site visit or simply want to understand the current property landscape in Dholera, our team is here to assist.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SPLIT SECTION ============ -->
+  <section class="contact-section" id="book">
+    <div class="container">
+      <div class="contact-grid reveal">
+        <div class="contact-bg-pattern"></div>
+        
+        <!-- Left: Form -->
+        <div class="contact-form-side">
+          <h2>Send an Enquiry</h2>
+          <p>Fill out the form below and a property advisor will get back to you within 24 hours.</p>
+
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="mobile">Mobile Number</label>
+              <input type="tel" id="mobile" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="requirement">Property Requirement</label>
+              <select id="requirement" class="form-control">
+                <option value="" disabled selected>Select an option</option>
+                <option value="residential">Residential Plot</option>
+                <option value="commercial">Commercial Plot</option>
+                <option value="industrial">Industrial Land</option>
+                <option value="undecided">Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Approximate Budget</label>
+              <select id="budget" class="form-control">
+                <option value="" disabled selected>Select an option</option>
+                <option value="under50">Under ₹50 Lakhs</option>
+                <option value="50to1cr">₹50 Lakhs - ₹1 Crore</option>
+                <option value="1crplus">Above ₹1 Crore</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="message">Additional Information (Optional)</label>
+              <textarea id="message" class="form-control" placeholder="Tell us more about your specific requirements, preferred plot sizes, or questions..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-navy">
+                Submit Enquiry
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <button type="button" class="btn btn-outline" style="border-color:var(--gold); color:var(--gold-dark);">
+                Book Site Visit
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Info -->
+        <div class="contact-info-side">
+          <h3>Contact Information</h3>
+          
+          <ul class="info-list">
+            <li class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div class="info-text">
+                <h4>Call Us</h4>
+                <p><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
+                <p style="font-size: 0.85rem; margin-top: 4px;">Mon-Sat: 9:00 AM - 7:00 PM</p>
+              </div>
+            </li>
+            
+            <li class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="info-text">
+                <h4>Email</h4>
+                <p><a href="mailto:info@dholerarealstate.com">info@dholerarealstate.com</a></p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="info-text">
+                <h4>Head Office</h4>
+                <p>Corporate Office Address,<br>Ahmedabad, Gujarat, India</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="remote-assistance">
+            <h4>Need Remote Assistance?</h4>
+            <p>If you are an NRI or out-of-state buyer, we can arrange a comprehensive virtual tour of the property and master plan.</p>
+            <a href="nri.html" class="btn btn-outline-white" style="padding: 10px 20px; font-size: 0.9rem;">Request Virtual Tour</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAP EMBED ============ -->
+  <section class="map-embed">
+    <!-- Placeholder for Google Maps Embed -->
+    <div class="map-embed-content reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 48px; height: 48px; margin-bottom: 12px; stroke: var(--gold);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <h3>Interactive Map Integration</h3>
+      <p style="font-size: 0.95rem; color: rgba(255,255,255,0.7);">The Google Map iframe will be placed here.</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">DHOLERA</div>
+          <span class="logo-subtitle">Real Estate</span>
+          <p>The information presented on this website is intended for general informational purposes only. Property availability, pricing, specifications, approvals, infrastructure timelines and other project information may change. Nothing on this website should be interpreted as a guarantee of property appreciation, rental income or investment returns.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="why-dholera.html">Dholera SIR</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="infrastructure.html">Infrastructure</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="residential.html">Residential</a></li>
+            <li><a href="commercial-industrial.html">Commercial & Industrial</a></li>
+            <li><a href="why-choose-us.html">Why Us</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="nri.html">NRI Investment</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="mailto:info@dholerarealstate.com">info@dholerarealstate.com</a></li>
+            <li><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
+            <li>Ahmedabad, Gujarat, India</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Dholera Real Estate. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

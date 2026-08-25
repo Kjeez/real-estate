@@ -1,0 +1,347 @@
+/* ============================================
+   WHY DHOLERA PAGE — Specific Styles
+   ============================================ */
+
+/* ---------- Page Hero Banner ---------- */
+.page-hero {
+  position: relative;
+  padding: 180px 0 100px;
+  background: var(--navy-deep);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.page-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.1);
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10,22,40,0.85) 0%,
+    rgba(10,22,40,0.6) 50%,
+    rgba(10,22,40,0.8) 100%
+  );
+  z-index: 1;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-hero-content h1 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.page-hero-content p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.7;
+}
+
+
+/* ---------- What Makes Dholera Different ---------- */
+.different-section {
+  padding: var(--section-padding);
+  background: var(--white);
+}
+
+.different-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* Center the bottom row items if grid spans multiple rows */
+@media (min-width: 1024px) {
+  .different-grid > div:nth-last-child(2):nth-child(4) {
+    grid-column: 1 / span 1;
+    transform: translateX(50%);
+  }
+  .different-grid > div:last-child:nth-child(5) {
+    grid-column: 2 / span 1;
+    transform: translateX(50%);
+  }
+}
+
+.diff-card {
+  padding: 40px;
+  border-radius: 12px;
+  background: var(--off-white);
+  border-top: 4px solid var(--gold);
+  transition: var(--transition-fast);
+}
+
+.diff-card:hover {
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+.diff-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--navy);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: var(--transition-fast);
+}
+
+.diff-card:hover .diff-icon {
+  background: var(--gold);
+  transform: rotate(5deg) scale(1.1);
+}
+
+.diff-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--white);
+  fill: none;
+}
+
+.diff-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: var(--navy);
+}
+
+.diff-card p {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+/* ---------- Opportunities Section ---------- */
+.opportunities-section {
+  padding: var(--section-padding);
+  background: var(--navy-deep);
+  color: var(--white);
+}
+
+.opportunities-section .section-label {
+  color: var(--gold);
+}
+
+.opportunities-section h2 {
+  color: var(--white);
+}
+
+.opp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.opp-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: var(--transition-fast);
+}
+
+.opp-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(201,169,110,0.4);
+  transform: translateY(-5px);
+}
+
+.opp-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  border: 2px dashed rgba(201,169,110,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.opp-card:hover .opp-icon {
+  border-color: var(--gold);
+  border-style: solid;
+  background: rgba(201,169,110,0.1);
+}
+
+.opp-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--gold);
+  fill: none;
+}
+
+.opp-card h3 {
+  color: var(--white);
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.opp-card p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+/* ---------- Checklist / Look Beyond Headlines ---------- */
+.checklist-section {
+  padding: var(--section-padding);
+  background: var(--off-white);
+}
+
+.checklist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.checklist-content h2 {
+  margin-bottom: 30px;
+}
+
+.checklist-content p {
+  font-size: 1.05rem;
+  color: var(--gray-600);
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.checklist {
+  list-style: none;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C9A96E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.checklist-image {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.checklist-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.checklist-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 8px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+
+/* ---------- Investor Disclaimer ---------- */
+.disclaimer-section {
+  padding: 60px 0;
+  background: var(--white);
+}
+
+.disclaimer-box {
+  border: 1px solid var(--gray-300);
+  border-left: 4px solid var(--gold);
+  background: var(--off-white);
+  padding: 30px 40px;
+  border-radius: 8px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.disclaimer-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(201,169,110,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disclaimer-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--gold-dark);
+}
+
+.disclaimer-content h4 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.disclaimer-content p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .opp-grid { grid-template-columns: repeat(2, 1fr); }
+  .checklist-grid { grid-template-columns: 1fr; gap: 40px; }
+  
+  .different-grid > div:nth-last-child(2):nth-child(4),
+  .different-grid > div:last-child:nth-child(5) {
+    transform: none;
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .opp-grid { grid-template-columns: 1fr; }
+  .disclaimer-box { flex-direction: column; padding: 24px; gap: 16px; }
+}

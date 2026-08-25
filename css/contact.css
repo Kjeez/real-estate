@@ -1,0 +1,278 @@
+/* ============================================
+   CONTACT PAGE — Specific Styles
+   ============================================ */
+
+/* ---------- Page Header ---------- */
+.page-header-simple {
+  padding: 160px 0 80px;
+  background: var(--navy-deep);
+  text-align: center;
+}
+
+.page-header-simple h1 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.page-header-simple p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ---------- Contact Section (Split Layout) ---------- */
+.contact-section {
+  padding: var(--section-padding);
+  background: var(--off-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+/* Background decoration behind the card */
+.contact-bg-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: radial-gradient(var(--gray-300) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Form Side */
+.contact-form-side {
+  padding: 60px;
+}
+
+.contact-form-side h2 {
+  font-size: 2rem;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.contact-form-side > p {
+  color: var(--gray-600);
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / span 2;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--navy);
+  transition: var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(201,169,110,0.1);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-actions {
+  grid-column: 1 / span 2;
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.form-actions .btn {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Info Side */
+.contact-info-side {
+  background: var(--navy-deep);
+  color: var(--white);
+  padding: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-side h3 {
+  color: var(--gold-light);
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.info-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(201,169,110,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--gold);
+}
+
+.info-text h4 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: var(--white);
+}
+
+.info-text p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.info-text a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.info-text a:hover {
+  color: var(--gold-light);
+}
+
+/* Remote Assistance Box */
+.remote-assistance {
+  margin-top: auto;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.remote-assistance h4 {
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.remote-assistance p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* ---------- Map Section ---------- */
+.map-embed {
+  height: 400px;
+  width: 100%;
+  background: var(--gray-200);
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-embed::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10,22,40,0.6);
+}
+
+.map-embed-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--white);
+  background: rgba(10,22,40,0.8);
+  padding: 20px 40px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  .form-group {
+    grid-column: 1 / span 1 !important;
+  }
+  .form-actions {
+    grid-column: 1 / span 1 !important;
+  }
+  .contact-form-side,
+  .contact-info-side {
+    padding: 40px 30px;
+  }
+}

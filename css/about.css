@@ -43,8 +43,8 @@
   position: relative;
   z-index: 2;
   max-width: 800px;
-  text-align: center;
-  margin: 0 auto;
+  text-align: left;
+  margin: 0;
 }
 
 .page-hero-content h1 {

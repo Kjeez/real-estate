@@ -80,6 +80,7 @@ a {
 ul { list-style: none; }
 
 .container {
+  width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 24px;

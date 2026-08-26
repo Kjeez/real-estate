@@ -141,6 +141,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
   border: 2px solid transparent;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -281,6 +282,13 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
   width: 24px;
   height: 24px;
   fill: var(--white);
+}
+
+.logo-icon-img {
+  width: 45px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 4px;
 }
 
 .logo-text {
@@ -1214,6 +1222,15 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
     align-items: center;
     gap: 24px;
     z-index: 1000;
+  }
+  
+  .nav-cta .btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  
+  .nav-cta .btn svg {
+    display: none;
   }
   
   .nav-links.active a {
